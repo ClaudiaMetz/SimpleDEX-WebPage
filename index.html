@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SimpleDEX WebPage</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>SimpleDEX WebPage</h1>
+    <div id="add-liquidity">
+      <h2>Add Liquidity</h2>
+      <input type="text" id="amountA" placeholder="Amount A" />
+      <input type="text" id="amountB" placeholder="Amount B" />
+      <button onclick="addLiquidity()">Add Liquidity</button>
+    </div>
+    <div id="remove-liquidity">
+      <h2>Remove Liquidity</h2>
+      <input type="text" id="removeAmountA" placeholder="Amount A" />
+      <input type="text" id="removeAmountB" placeholder="Amount B" />
+      <button onclick="removeLiquidity()">Remove Liquidity</button>
+    </div>
+    <div id="swap-a-for-b">
+      <h2>Swap Token A for Token B</h2>
+      <input type="text" id="swapAmountA" placeholder="Amount A" />
+      <button onclick="swapAforB()">Swap</button>
+      <p id="amountBReceived"></p>
+    </div>
+    <div id="swap-b-for-a">
+      <h2>Swap Token B for Token A</h2>
+      <input type="text" id="swapAmountB" placeholder="Amount B" />
+      <button onclick="swapBforA()">Swap</button>
+      <p id="amountAReceived"></p>
+    </div>
+    <div id="get-price">
+      <h2>Get Token Price</h2>
+      <input type="text" id="tokenAddress" placeholder="Token Address" />
+      <button onclick="getPrice()">Get Price</button>
+      <p id="tokenPrice"></p>
+      <p>Token A: 0xc814C520b8F65837500825786D5D0f8E9C706Bfc</p>
+      <p>Token B: 0x928E7Cc1CCf65f323eBA4A0f1Be7486383831a1c</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.3.6/dist/web3.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
